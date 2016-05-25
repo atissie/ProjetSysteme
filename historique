@@ -16,3 +16,86 @@ cd test
 cp test test2
 ls
 git add*
+history
+history -n
+ls
+ls -l
+cd ..
+touch historique
+ls -l
+touch essai
+ls -l
+touch historique
+ls -l
+touch essai
+ls -l
+ls
+ls -l
+touch essai
+ls -l
+ls -l
+touch essai
+ls -l
+ls -l
+touch essai
+ls -l
+ls -l
+touch nouv_shell
+ls -l
+ls
+ls -l
+touch essai
+ls -l
+ls
+ls -l
+touch a
+ls -l
+cd ..
+ls
+quit
+cat essai
+cp test test2
+whoami
+cat -n essai
+cat -m essai historique
+ls -l > essai
+cat essai
+whoami
+ls
+clear
+ls
+ls
+cd ..
+cat essai
+touch toto
+ps > toto
+cat -m essai toto
+exit
+history
+history -5
+whoami
+gedit toto
+ls -l > toto
+cat toto
+history 5
+cd ~
+cd
+ls
+cd ..
+cd ~
+cd ~
+cd
+cd
+cd
+cd 
+cd ~
+ls
+cd
+cd ..
+ls
+ls
+ls -l
+touch toto
+ls -l
+cat toto
+history

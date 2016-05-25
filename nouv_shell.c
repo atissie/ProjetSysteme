@@ -9,6 +9,7 @@
 #include <string.h>
 #include <dirent.h>
 #include <errno.h>
+#include <utime.h>
 
 
 void  lireCommande(char * ligne);
@@ -520,7 +521,7 @@ int remplirArg(char * ligne,char **com, char *car) //lit une ligne, la divise se
 
 void execCd(char ** com)
 {
-    if(com[1]!=NULL)
+    if(com[1]!=NULL && strcmp(com[1],"~")!=0)
     {
         if(chdir(com[1])!=0)
         {
@@ -528,7 +529,10 @@ void execCd(char ** com)
         }
     }
     else
-        chdir("~");
+       if(chdir("/~")!=0)
+        {
+            printf("Repertoire mauvais\n");
+        }
 }
 
 void history(char **com, int nbArg)
@@ -566,6 +570,10 @@ void nouvTouch(char ** com, int nbArg)
         //strcpy(nomFic,repCour);
         //strcat(nomFic,commande[1]);c
         int fd=open(com[1],O_RDONLY | O_CREAT,0666);
+        struct utimbuf ubuf;
+        ubuf.modtime = time(NULL);
+        ubuf.actime = time(NULL);
+        utime(com[1], &ubuf);
         close(fd);
     }
     /*else if(!strcmp(com[3],"-t"))
@@ -578,12 +586,15 @@ void nouvTouch(char ** com, int nbArg)
         }
 
     }*/
-    else
+    /*else
     {
 
-    }
+    }*/
     libereEspace(com,nbArg);
 }
+
+
+
 
 
 void nouvQuit()
