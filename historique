@@ -1,0 +1,12 @@
+ls
+history
+cat essai
+cat historique
+cat -m historique
+cat -m historique essai
+pwd
+whoami
+cp test test2
+pwd > essai
+cat essai
+exit
