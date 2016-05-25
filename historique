@@ -10,3 +10,9 @@ cp test test2
 pwd > essai
 cat essai
 exit
+cp test test2
+ls
+cd test
+cp test test2
+ls
+git add*
